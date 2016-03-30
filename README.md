@@ -10,11 +10,11 @@ If you haven't already done so, install [grunt-init][].
 Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
 
 ```
-git clone http://gitlab.umiit.cn/node/grunt-init-umi-node.git ~/.grunt-init/umi-node
+git clone http://gitlab.umiit.cn/tool/grunt-init-umi-node.git ~/.grunt-init/umi-node
 
 or
 
-git clone g:node/grunt-init-umi-node.git ~/.grunt-init/umi-node
+git clone g:tool/grunt-init-umi-node.git ~/.grunt-init/umi-node
 ```
 
 _(Windows users, see [the documentation][grunt-init] for the correct destination directory path)_
