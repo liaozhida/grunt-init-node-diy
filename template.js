@@ -23,6 +23,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('node_version', '>= 0.12.0'),
+    init.prompt('page_dir', ''),
     init.prompt('main'),
     init.prompt('npm_test', 'grunt nodeunit'), {
       name: 'gitlab_ci',
@@ -32,13 +33,13 @@ exports.template = function(grunt, init, done) {
     },
   ], function(err, props) {
     props.keywords = [];
-    props.homepage = 'http://gitlab.umiit.cn/' + props.name;
+    props.homepage = 'http://gitlab.umiit.cn/' + (props.page_dir ? props.page_dir + '/' : '') + props.name;
     props.repository = props.homepage + '.git';
     props.bugs = props.homepage + '/issues';
     props.devDependencies = {
-      'grunt-contrib-jshint': '~0.6.4',
-      'grunt-contrib-nodeunit': '~0.2.0',
-      'grunt-contrib-watch': '~0.5.3',
+      'grunt-contrib-jshint': '~1.0.0',
+      'grunt-contrib-nodeunit': '~1.0.0',
+      'grunt-contrib-watch': '~1.0.0',
     };
 
     props.gitlab_ci = /y/i.test(props.gitlab_ci);
